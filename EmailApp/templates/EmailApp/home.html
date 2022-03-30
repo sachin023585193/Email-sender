@@ -1,0 +1,53 @@
+{% extends 'EmailApp/base.html' %} {% block content %}
+<section class="content">
+    <!-- <h4 class="text-center py-2">We make managing your forms easier.</h4> -->
+    <div class="container mt-4">
+        <h6>
+            Need to make your forms work without needing to learn backend? Worry not coz we got you. Make your forms work with small extra line of code
+        </h6>
+        <br>
+        <p><b>A quick view of how this works:-</b></p>
+        <div class="snippet">
+            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/">
+                //your form fields
+            </form>
+        </div>
+        <p class="m-0">
+            Just set <b>action="https://sendemail-to.herokuapp.com/mailto/email@example.com/"</b> and
+            <b</b> on your form
+        </p>
+        <p>Be sure to set <b>email@example.com </b> to your email</p>
+        <p>Below is a better example:-</p>
+        <div class="snippet">
+            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/">
+                <input type="text" name="name">
+                <input type="email" name="email">
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <b><p>This submits the form to our backend and our backend will send the mail to the given recipent.</p></b>
+        <p><b class="text-danger">IMPORTANTNOTE:</b> Dont forget to add name field in your inputs or it wont work</p>
+        <p>The above example works fine but there's a problem.It is not good to reveal your personal email right? Also what if you want to send the mail to <b>multiple</b> email accounts?</p>
+        <p class="m-0">Worry not we got a solution for that aswell..</p>
+        <p><b>Just visit <a href="{% url 'getkey' %}">here</a> to get a unique and secret key</b></p>
+        <p class="m-0"><b>Then it's easy:-</b></p>
+        <div class="snippet mb-1">
+            <form action="https://sendemail-to.herokuapp.com/key/<secretkey>/">
+                //your form fields
+            </form>
+        </div>
+        <p class="m-0"><b>A better example could be:-</b></p>
+        <div class="snippet">
+            <form action="https://sendemail-to.herokuapp.com/key/bd54693d-eb86-4f71-8bc1-11b257f80be8/">
+                <input type="text" name="name">
+                <input type="email" name="email">
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <p class="m-0"><b>Now try submitting the form and check your mail you would have recieved a email</b></p>
+        <p>And that is it. <i>Thanks</i></p>
+    </div>
+</section>
+{% endblock content %}

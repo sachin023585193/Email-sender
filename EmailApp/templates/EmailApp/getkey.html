@@ -1,0 +1,23 @@
+{% extends 'EmailApp/base.html' %} {% block content %}
+<section class="key_generare_container">
+    <div class="key_generator px-5 text-center">
+        <h2 class="light-text">Generate Secret key</h2>
+        <p class="light-text m-0">Enter gmail accounts you want to link your secret key to</p>
+        <p class="light-text m-0">if you want to link multiple gmail account with one secret key just Separate them with a comma(',')</p>
+        <form action="" method="POST" id="keysubmit">
+            {% csrf_token %}
+            <div class="type_field" style="font-size: large;">
+                <input type="text" class="form-control" name="projectname" placeholder="Enter your project name" required>
+                <textarea class="form-control mt-1" id="text-area" name="emails" cols="70" rows="5" placeholder="email1@gmail.com,email2@gmail.com,email3@gmail.com" required></textarea>
+                <div class="d-grid grid-1 mt-1">
+                    <button type="submit" class="btn btn-warning">Generate Secret Key</button>
+                </div>
+            </div>
+        </form>
+        <p class="text-danger m-0" id="msg"></p>
+        <div class="mail-info">
+
+        </div>
+    </div>
+</section>
+{% endblock content %}
