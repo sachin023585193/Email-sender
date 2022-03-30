@@ -8,18 +8,18 @@
         <br>
         <p><b>A quick view of how this works:-</b></p>
         <div class="snippet">
-            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/">
+            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/" method="POST">
                 //your form fields
             </form>
         </div>
         <p class="m-0">
             Just set <b>action="https://sendemail-to.herokuapp.com/mailto/email@example.com/"</b> and
-            <b</b> on your form
+            <b>method='POST'</b> on your form
         </p>
         <p>Be sure to set <b>email@example.com </b> to your email</p>
         <p>Below is a better example:-</p>
         <div class="snippet">
-            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/">
+            <form action="https://sendemail-to.herokuapp.com/mailto/email@example.com/" method="POST">
                 <input type="text" name="name">
                 <input type="email" name="email">
                 <textarea name="message" id="" cols="30" rows="10"></textarea>
@@ -33,13 +33,13 @@
         <p><b>Just visit <a href="{% url 'getkey' %}">here</a> to get a unique and secret key</b></p>
         <p class="m-0"><b>Then it's easy:-</b></p>
         <div class="snippet mb-1">
-            <form action="https://sendemail-to.herokuapp.com/key/<secretkey>/">
+            <form action="https://sendemail-to.herokuapp.com/key/<secretkey>/" method="POST">
                 //your form fields
             </form>
         </div>
         <p class="m-0"><b>A better example could be:-</b></p>
         <div class="snippet">
-            <form action="https://sendemail-to.herokuapp.com/key/bd54693d-eb86-4f71-8bc1-11b257f80be8/">
+            <form action="https://sendemail-to.herokuapp.com/key/bd54693d-eb86-4f71-8bc1-11b257f80be8/" method="POST">
                 <input type="text" name="name">
                 <input type="email" name="email">
                 <textarea name="message" id="" cols="30" rows="10"></textarea>
